@@ -1,0 +1,14 @@
+<%= f.label :notes %>
+  <%= f.text_field :notes %>
+  <br />
+
+  <%= f.text_field :notes, list: "notes_autocomplete" %>
+  <datalist id="notes_autocomplete">
+    <% Note.all.each do |note| %>
+      <option value="<%= notes.name %>">
+    <% end %>
+  </datalist>
+
+    <%= f.label :notes %>
+  <%= f.text_field :notes %>
+  <br />
